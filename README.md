@@ -1,0 +1,2 @@
+- CleanArchitectureの実装練習
+- ちゃんと実装できたらいろいろ書く
