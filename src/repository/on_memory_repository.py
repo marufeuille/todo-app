@@ -16,6 +16,9 @@ class OnMemoryToDoItemRepository(AbstractToDoItemRepository):
             raise KeyError()
         return self.repo[item_id]
 
+    def get_next_id(self) -> IdType:
+        return max(self.repo.keys()) + 1
+
     def update(self, item: ToDoItem):
         if item.id not in self.repo.keys():
             raise KeyError()

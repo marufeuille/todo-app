@@ -10,7 +10,7 @@ class ToDoItemCreateInputData:
     start_date: Optional[datetime]
     due_date: Optional[datetime]
 
-class ToDoItemCreateUseCase(metaclass=ABCMeta):
+class AbstractToDoItemCreateUseCase(metaclass=ABCMeta):
     @abstractmethod
     def handle(self, input_data: ToDoItemCreateInputData):
         pass
@@ -20,7 +20,7 @@ class CalculateDueDateInputData:
     due: datetime
     include: bool = True
 
-class CalculateDueDateUseCase(metaclass=ABCMeta):
+class AbstractCalculateDueDateUseCase(metaclass=ABCMeta):
     @abstractmethod
     def handle(self, input_data: CalculateDueDateInputData):
         pass
