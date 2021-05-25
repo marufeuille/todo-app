@@ -3,7 +3,7 @@ from abc import ABCMeta, abstractmethod
 from src.entities.entities import IdType, ToDoItem
 
 
-class AbstractToDoItemRepository(metaclass=ABCMeta):
+class BaseToDoItemRepository(metaclass=ABCMeta):
     # Create
     @abstractmethod
     def create(self, item: ToDoItem):

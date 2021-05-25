@@ -1,8 +1,8 @@
 from src.entities.entities import IdType, ToDoItem
 from typing import Dict
-from src.repository.abstract_repository import AbstractToDoItemRepository
+from src.repository.base_repository import BaseToDoItemRepository
 
-class OnMemoryToDoItemRepository(AbstractToDoItemRepository):
+class OnMemoryToDoItemRepository(BaseToDoItemRepository):
     def __init__(self):
         self.repo: Dict[IdType, ToDoItem] = {}
 
